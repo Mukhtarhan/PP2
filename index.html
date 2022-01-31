@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html style="color:red">
+  <head>
+    <title>Привет Бро</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="мой сайт, html, привет бро">
+    <meta name="keywords" content="Этот сайт помогает создавать людям собственные сайты">
+    <link rel="shortcut icon" href="https://atom.io/favicon.ico">
+    <style>
+      table {
+        color:blue
+      }
+    </style>
+	<script>
+		class Bloger {
+		    constructor(lookCannel, hereLogo, firstName, lastName) {
+			   this.lookCannel = lookCannel;
+                           this.hereLogo = hereLogo;			 
+			   this.firstName = firstName;
+			   this.lastName = lastName;
+		  }
+  letsCode() {
+    console.log(`${this.lookCannel} ${this.hereLogo} [автор канала: ${this.firstName} ${ this.lastName}]`); 
+		  } 
+	   }
+	   
+  let bloger1 = new Bloger('Канал', 'JavaScript', 'DKA', 'DEVELOP');
+        bloger1.letsCode();
+	</script
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    Я пишу текст для окна браузера, например Google Chrome.
+    <h1 class="privet">Этот заголовок H1</h1>
+    <h2 id="name" style="color:black">Этот заголовок H2</h2>
+    <p id="ideveloper">Текст внутри <br> тега p</p>
+    <p><b>Текст жирный</b></p>
+    <p><em>Текст курсивом</em></p>
+    <a href="https://www.youtube.com/watch?v=KYmFYP8VlPw">Ролик на YouTube</a>
+    <br>
+    <a href="#ideveloper">Якорь на параграф ideveloper</a>
+
+    <ul class="list">
+      <li height="90">Первый элемент списка</li>
+      <li>Второй элемент списка</li>
+      <li> <a href="https://ya.ru">Yandex</a> ссылка на главную страницу</li>
+      <ul>
+        <li>Второй уровень</li>
+        <li>Второй уровень</li>
+      </ul>
+    </ul>
+
+    <hr>
+
+    <table class="newstyle" border="1">
+      <thead>
+        <tr>
+          <th height="90">Наименование фрукта</th>
+          <th>Кол-во</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Яблоко</td>
+          <td>2 <img src="http://bit.ly/2IqQm5t" height="90"></td>
+        </tr>
+        <tr>
+          <td>Апельсин</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Итого: 5</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <form class="" action="index.html" method="post">
+      <input type="month">
+    </form>
+
+    <div class="">
+
+    </div>
+
+    <a class="font-size-md color-red" href="#">Первая ссылка</a>
+    <br>
+    <a class="font-size-md color-gray" href="#">Вторая ссылка</a>
+    <br>
+    <a class="color-gray" href="#">Вторая ссылка</a>
+  </body>
+</html>
