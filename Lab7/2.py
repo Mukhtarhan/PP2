@@ -6,7 +6,7 @@ done = False
 cnt=0
 curr=int()
 flPause=False
-
+s=str()
 
 while not done:
         for event in pygame.event.get():
@@ -26,25 +26,26 @@ while not done:
                          else:
                             pygame.mixer.music.unpause()
                             cnt=1
-                if event.type==pygame.KEYDOWN and event.key==pygame.K_RIGHT and curr<=1:
-                    curr+=1
-                    pygame.mixer.music.stop()
-                    pygame.mixer.Sound.stop(sound_effect)
-                    sound_effect=pygame.mixer.Sound(list_songs[curr])
-                    pygame.mixer.Sound.play(sound_effect)
+                if event.type==pygame.KEYDOWN and event.key==pygame.K_RIGHT:
+                    if curr<=1:
+
+                          curr+=1
+                          s=list_songs[curr]
+                          pygame.mixer.music.load(s)
+                          pygame.mixer.music.play()
+                    else:
+                         curr=0
+                         pygame.mixer.music.load('Lab7/sample1.ogg')
+                         pygame.mixer.music.play()
                     
-                if event.type==pygame.KEYDOWN and event.key==pygame.K_RIGHT and curr==2:
-                    curr=0
-                    pygame.mixer.music.load('Lab7/sample1.ogg')
-                    pygame.mixer.music.play()
-                    
-                if event.type==pygame.KEYDOWN and event.key==pygame.K_LEFT and curr>=1:
-                    curr-=1
-                    pygame.mixer.music.load(list_songs[curr])
-                    pygame.mixer.music.play()
-                    
-                if event.type==pygame.KEYDOWN and event.key==pygame.K_LEFT and curr==0: 
-                    curr=2 
-                    pygame.mixer.music.load('Lab7/sample3.ogg')
-                    pygame.mixer.music.play()   
+                if event.type==pygame.KEYDOWN and event.key==pygame.K_LEFT:
+                    if curr>=1:
+                        curr-=1
+                        s=list_songs[curr]
+                        pygame.mixer.music.load(s)
+                        pygame.mixer.music.play()
+                    else:
+                        curr=2 
+                        pygame.mixer.music.load('Lab7/sample3.ogg')
+                        pygame.mixer.music.play()   
         pygame.display.flip()
