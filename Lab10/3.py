@@ -11,7 +11,7 @@ config = psycopg2.connect(
 current=config.cursor()
 
 config.commit()
-samp_query='SELECT phone from phonebook where name= "Mukhtarhan" '
+samp_query='''SELECT phone from phonebook where name = 'Mukhtarhan' '''
 current.execute(samp_query)
 records=current.fetchall()
 
